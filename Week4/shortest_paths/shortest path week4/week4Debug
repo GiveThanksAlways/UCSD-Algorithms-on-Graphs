@@ -1,0 +1,13 @@
+#!/bin/bash
+g++ -pipe -O2 -std=c++11 -o shortest_paths_EXE shortest_paths.cpp -lm
+./shortest_paths_EXE < test2.txt 
+./shortest_paths_EXE < test2.txt > testResult.txt
+echo " "
+echo " "
+echo "------answer------ "
+echo " "
+
+
+
+cat test2A.txt
+

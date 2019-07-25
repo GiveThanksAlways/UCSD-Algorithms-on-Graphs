@@ -1,0 +1,16 @@
+#!/bin/bash
+g++ -pipe -O2 -std=c++11 -o shortest_paths_EXE shortest_paths.cpp -lm
+./shortest_paths_EXE < test2.txt 
+./shortest_paths_EXE < test2.txt > testResult.txt
+echo " "
+
+if diff -q "testResult.txt" "test2A.txt"
+then
+	echo " "
+	echo "Success!"
+else
+	echo " "
+	echo "\"YOU SHALL NOT PASS\" -Gandolf"
+	echo " " 
+	diff "testResult.txt" "test2A.txt"
+fi
